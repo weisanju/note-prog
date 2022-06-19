@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>C++与C的区别</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">我的笔记库</a></li><li class="chapter-item expanded affix "><li class="part-title"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> C++</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1.C++/C++与C的区别.html" class="active"><strong aria-hidden="true">1.1.</strong> C++与C的区别</a></li><li class="chapter-item expanded "><a href="../1.C++/C++面向对象.html"><strong aria-hidden="true">1.2.</strong> C++面向对象</a></li><li class="chapter-item expanded "><a href="../1.C++/泛型编程.html"><strong aria-hidden="true">1.3.</strong> 泛型编程</a></li><li class="chapter-item expanded "><a href="../1.C++/cmake/index.html"><strong aria-hidden="true">1.4.</strong> cmake</a></li></ol></li><li class="chapter-item expanded "><a href="../2.LUA/index.html"><strong aria-hidden="true">2.</strong> LUA</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2.LUA/基本语法.html"><strong aria-hidden="true">2.1.</strong> 基本语法</a></li><li class="chapter-item expanded "><a href="../2.LUA/高级语法.html"><strong aria-hidden="true">2.2.</strong> 高级语法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> rust</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.rust/1常见编程概念.html"><strong aria-hidden="true">3.1.</strong> 1常见编程概念</a></li><li class="chapter-item expanded "><a href="../3.rust/2所有权.html"><strong aria-hidden="true">3.2.</strong> 2所有权</a></li><li class="chapter-item expanded "><a href="../3.rust/ConstantsAndVariables.html"><strong aria-hidden="true">3.3.</strong> ConstantsAndVariables</a></li><li class="chapter-item expanded "><a href="../3.rust/Rust中的Sizedness.html"><strong aria-hidden="true">3.4.</strong> Rust中的Sizedness</a></li><li class="chapter-item expanded "><a href="../3.rust/Rust库API设计文档规范.html"><strong aria-hidden="true">3.5.</strong> Rust库API设计文档规范</a></li><li class="chapter-item expanded "><a href="../3.rust/const类型与函数.html"><strong aria-hidden="true">3.6.</strong> const类型与函数</a></li><li class="chapter-item expanded "><a href="../3.rust/newType模式.html"><strong aria-hidden="true">3.7.</strong> newType模式</a></li><li class="chapter-item expanded "><a href="../3.rust/rust执行shell命令.html"><strong aria-hidden="true">3.8.</strong> rust执行shell命令</a></li><li class="chapter-item expanded "><a href="../3.rust/rust指针.html"><strong aria-hidden="true">3.9.</strong> rust指针</a></li><li class="chapter-item expanded "><a href="../3.rust/rust面向对象特性.html"><strong aria-hidden="true">3.10.</strong> rust面向对象特性</a></li><li class="chapter-item expanded "><a href="../3.rust/依赖管理.html"><strong aria-hidden="true">3.11.</strong> 依赖管理</a></li><li class="chapter-item expanded "><a href="../3.rust/函数式编程.html"><strong aria-hidden="true">3.12.</strong> 函数式编程</a></li><li class="chapter-item expanded "><a href="../3.rust/宏.html"><strong aria-hidden="true">3.13.</strong> 宏</a></li><li class="chapter-item expanded "><a href="../3.rust/常见集合.html"><strong aria-hidden="true">3.14.</strong> 常见集合</a></li><li class="chapter-item expanded "><a href="../3.rust/模式匹配.html"><strong aria-hidden="true">3.15.</strong> 模式匹配</a></li><li class="chapter-item expanded "><a href="../3.rust/泛型与trait.html"><strong aria-hidden="true">3.16.</strong> 泛型与trait</a></li><li class="chapter-item expanded "><a href="../3.rust/结构体.html"><strong aria-hidden="true">3.17.</strong> 结构体</a></li><li class="chapter-item expanded "><a href="../3.rust/迭代与闭包.html"><strong aria-hidden="true">3.18.</strong> 迭代与闭包</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.19.</strong> rfcs</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.rust/rfcs/0195_associated-items.html"><strong aria-hidden="true">3.19.1.</strong> 0195_associated-items</a></li><li class="chapter-item expanded "><a href="../3.rust/rfcs/0911-const-fn.html"><strong aria-hidden="true">3.19.2.</strong> 0911-const-fn</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> groovy</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../4.groovy/RuntimeAndCompile-timeMetaprogramming.html"><strong aria-hidden="true">4.1.</strong> RuntimeAndCompile-timeMetaprogramming</a></li><li class="chapter-item expanded "><a href="../4.groovy/基础语法.html"><strong aria-hidden="true">4.2.</strong> 基础语法</a></li><li class="chapter-item expanded "><a href="../4.groovy/开发工具类.html"><strong aria-hidden="true">4.3.</strong> 开发工具类</a></li><li class="chapter-item expanded "><a href="../4.groovy/操作符.html"><strong aria-hidden="true">4.4.</strong> 操作符</a></li><li class="chapter-item expanded "><a href="../4.groovy/编程结构.html"><strong aria-hidden="true">4.5.</strong> 编程结构</a></li></ol></li><li class="chapter-item expanded "><a href="../5.typescript/index.html"><strong aria-hidden="true">5.</strong> typescript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.typescript/1.基础类型.html"><strong aria-hidden="true">5.1.</strong> 基础类型</a></li><li class="chapter-item expanded "><a href="../5.typescript/2.变量声明.html"><strong aria-hidden="true">5.2.</strong> 变量声明</a></li><li class="chapter-item expanded "><a href="../5.typescript/3.接口.html"><strong aria-hidden="true">5.3.</strong> 接口</a></li><li class="chapter-item expanded "><a href="../5.typescript/4.模块.html"><strong aria-hidden="true">5.4.</strong> 模块</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/index.html"><strong aria-hidden="true">5.5.</strong> jtest测试框架</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Except.html"><strong aria-hidden="true">5.5.1.</strong> Except</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Globals.html"><strong aria-hidden="true">5.5.2.</strong> Globals</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Hook顺序.html"><strong aria-hidden="true">5.5.3.</strong> Hook顺序</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="c对-c-的加强"><a class="header" href="#c对-c-的加强">C++对 C 的加强</a></h1>
+<h2 id="变量与常量"><a class="header" href="#变量与常量">变量与常量</a></h2>
+<ul>
+<li>
+<p>register 关键字在 C++中失效了,只是为了兼容C语言</p>
+</li>
+<li>
+<p>C 语言可以同时声明多个同名变量,指向同一个地址空间,C++编译不通过</p>
+</li>
+<li>
+<p>C 语言中的 const 关键字只是在编译器限制 变量不可变</p>
+<p>①C++对于 const 作了加强,当碰见常量声明时,在符号表中放入常量,编译过程中若发现使用常量则直接以符号表中的值替换</p>
+<p>②C++编译器不一定给常量分配空间,  只有对 const 使用了 extern 或者&amp;操作符, 时才会分配空间但是不会使用这个存储空间的值 </p>
+<p>③C++ 常量跟宏的区别, 作用域的区别</p>
+</li>
+</ul>
+<p><strong>宏的作用域 是整个文件</strong>,这样会导致权限无法限定, (可以通过 undefined 来限定) </p>
+<pre><code class="language-c++">#define a 3
+#undefine a
+</code></pre>
+<h2 id="struct-为新类型"><a class="header" href="#struct-为新类型"><code>struct</code> 为新类型</a></h2>
+<ul>
+<li>
+<p>C++的类型: struct 类型</p>
+</li>
+<li>
+<p>C 语言的 struct 类型 ,编译器认为只是变量的集合, 而不是新类型, C++是新类型</p>
+</li>
+</ul>
+<pre><code class="language-c++">struct Student{
+	const char * name;
+	int age;
+}
+//C++
+int main(){
+	Student s1 = {&quot;sdff&quot;,30};
+	Student s2 = {&quot;sdff&quot;,31};
+}
+//C
+{
+    struct Student s1 = {};
+}
+</code></pre>
+<h2 id="函数默认参数与默认返回值"><a class="header" href="#函数默认参数与默认返回值">函数默认参数与默认返回值</a></h2>
+<ul>
+<li>C 语言中的默认类型 f(i); </li>
+<li>默认为整数参数,返回值默认为整数</li>
+<li>在 C++中不支持</li>
+</ul>
+<h2 id="cbool类型"><a class="header" href="#cbool类型">c++bool类型</a></h2>
+<ul>
+<li>
+<p>C++中的 bool 类型 取值 是 <code>true</code> <code>false</code> ,</p>
+</li>
+<li>
+<p>理论上只占用 一个字节,如果多个 bool 类型定义在一起,<em>可能会被放到 同一个字节中(依据编译器的不同)</em> </p>
+</li>
+<li>
+<p>给 C++中的 bool 类型赋值 整数时,非 0 为 true,0 为 false,(兼容C语言)</p>
+</li>
+</ul>
+<h2 id="c中的三目运算符"><a class="header" href="#c中的三目运算符">C++中的三目运算符</a></h2>
+<ul>
+<li>
+<p>可以作为左值使用</p>
+<p>三目运算符的返回值 如果返回的时一个变量,则可以当做左值使用,如果可能的返回值里面有一个是常量,则不能作为左值使用</p>
+</li>
+</ul>
+<h2 id="c中的引用"><a class="header" href="#c中的引用">C++中的引用</a></h2>
+<p><strong>变量</strong></p>
+<ul>
+<li><code>变量</code> 一段连续内存空间的别名</li>
+<li>程序通过变量来申请存储空间</li>
+<li>通过变量可以使用存储空间</li>
+</ul>
+<p>**引用 **</p>
+<p><strong>是已经定义变量的别名</strong>(<code>引用 必须用其他的变量初始化</code>)</p>
+<ol>
+<li>语法 Type&amp; name=varname;</li>
+<li>引用 可读性 好</li>
+<li>引用作为函数参数</li>
+<li>const int &amp;a 引用,const 引用只是让变量 拥有只读属性</li>
+<li>const 引用进行初始化 时,C++编译器会为常量值 分配空间,并将引用名作为这段空间的别名, 跟 C 语言中的 只读变量一样</li>
+<li>引用有自己的空间吗? 引用的 本质上是 C 语言中的 常指针 Type &amp; name -&gt; Type * const name 为了实用性,而做出的细节隐藏</li>
+<li>引用作为函数返回值 时 不能 作为左值使用, 当引用是静态全局变量时 可以</li>
+<li>无法建立引用数组</li>
+</ol>
+<h2 id="内联函数"><a class="header" href="#内联函数">内联函数</a></h2>
+<ol>
+<li>
+<p>内联函数 必须与函数定义结合在一起</p>
+<ol>
+<li>
+<p><code>inline int func(int a){return a&lt;b?:a:b;}</code> 直接 对其他调用它的函数 进行 直接 插入替换</p>
+</li>
+<li>
+<p>C++不一定响应函数的内联 请求,如果 请求不通过,则 退化成普通函数,</p>
+</li>
+<li>
+<p>内联函数没有普通函数 调用的开销,编译器还是会进行类型检查</p>
+</li>
+<li>
+<p>宏是由 预处理器进行简单的替换的,而 内联函数 是 由编译器进行的</p>
+</li>
+<li>
+<p>强制 内联编译 inline int func(int a) **attribute_((always_inline)); g++ -S 编译成汇编代码 **</p>
+</li>
+<li>
+<p>C++内联 编译的 限制 :</p>
+<ol>
+<li>
+<p>不能存在任何形式的循环语句</p>
+</li>
+<li>
+<p>不能存在过多的条件判断</p>
+</li>
+<li>
+<p>函数体不能过于庞大,一般比超过五句</p>
+</li>
+<li>
+<p>不能对函数进行取址操作</p>
+</li>
+<li>
+<p>函数内联声明必须在调用语句之前</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>
+<p>C++中的 符号表 ,是 C++编译器 在编译代码 时 自己使用的 在处理内联请求 时,会把 内联函数放到 符号表中,当有地方调用它时,会进行类型检查,返回值检查</p>
+</li>
+<li>
+<p>函数默认参数</p>
+<ol>
+<li>int mul(x=0); 函数参数默认值</li>
+<li>一旦函数参数开始使用 默认值,其后的参数必须也使用默认值</li>
+</ol>
+</li>
+<li>
+<p>C++的函数占位参数,</p>
+<ol>
+<li><code>int func(int a,int b,int)</code> 无法使用函数占位参数</li>
+<li><code>int func(int a,int b,int=0)</code></li>
+</ol>
+</li>
+<li>
+<p>C++中的重载</p>
+<ol>
+<li>函数名相同,定义不同的函数参数</li>
+<li>函数重载,跟默认参数 会发生二义性, 编译不通过</li>
+<li>函数重载的编译方法精确匹配实参, 默认参数匹配, 默认类型转发匹配,同时进行,不能存在二义性</li>
+<li>函数重载 与函数指针 在用函数名称 跟函数指针 赋值时 选择与函数指针类型参数列表篇一致 的候选者</li>
+</ol>
+</li>
+<li>
+<p>C,与 C++的相互调用</p>
+<ol>
+<li>
+<p>C 语言的编译器 兼容 C 语言的编译器</p>
+</li>
+<li>
+<p>C++ 优先使用 C++的编译方式, extern 强制让 C++对代码进行 C 方式编译</p>
+</li>
+<li>
+<p><code>extern &quot;C&quot;{ #include &quot;add.h&quot; }</code> 告诉 g++ 编译器, 这个头文件里的文件都是 C 语言编译的</p>
+</li>
+<li>
+<p>内置宏</p>
+<pre><code class="language-c++">#ifdef  __cplusplus
+extern &quot;C&quot;{       #endif      #ifdef __cplusplus       }
+#endif
+</code></pre>
+</li>
+<li>
+<p>C++ 编译器不能以 C 的方式 编译重载</p>
+</li>
+</ol>
+</li>
+<li>
+<p>动态内存申请:(新增)</p>
+<ol>
+<li>变量 Type * pointe=new Type;</li>
+<li>数组申请 Type * pointer =new Type[N];</li>
+<li>delete pointer 释放内存,delete [ ] pointer</li>
+<li>int * pi=new int(1) 申请空间时初始化,内存空间</li>
+</ol>
+</li>
+<li>
+<p>C++在中的命名空间</p>
+<ol>
+<li>
+<p>C 语言中所有的全局标识符共享同一个作用域,标识符之间可能会发生冲突</p>
+</li>
+<li>
+<p>命名空间将全局作用域分成不同的部分,不同命名空间中的标识符,可以重名,命名空间可以相互嵌套,全局作用域 也叫默认命名空间</p>
+</li>
+<li>
+<p>命名空间的定义</p>
+<pre><code class="language-c++">namespace first{       int i=0;     }
+namespace second{       int i=0;
+                 namespace Internal{       int p=0;
+}}
+</code></pre>
+</li>
+<li>
+<p>命名空间的使用</p>
+<pre><code class="language-c++">using namespace First; //可以直接使用命名空间的所有定义变量
+using Second::Internal::P;     //Second::i 使用second命名空间中的i
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>强制类型转换</p>
+<p>① 基本类型转换 <code>static_cast</code></p>
+<pre><code>char c=static_cast&lt;char)(i);
+char *c=static_cast&lt;char *)(i);  //错误 ,只能用于基本类型的转换,只是在编译器检查
+</code></pre>
+<p>②const_cast 去除变量的 const 属性</p>
+<pre><code class="language-c++">const int &amp;j=1;
+int &amp;k=const_cast&lt;int &amp;&gt;(j);
+const int x=2;
+int &amp;y= const_cast&lt;int&amp;&gt;(x) //这会发生x,y 地址相同,但是值不同
+</code></pre>
+<p>③reinterpret_cast 指针类型转换 和 整数跟指针类型间的强制转换</p>
+<p>直接从二进制位进行复制,是一种及其不安全的转换</p>
+<p>④volatile const int y=2 退化成只读变量, const int z = y 将变量赋值给 一个常量 会退化成 只读变量</p>
+<p>⑤ 凡是不能在编译器确定的 常量,均退化成只读变量,</p>
+<p>⑥ 常(只读)引用,在用相同类型初始化时,会引用 相同的变量, 如果 用不同类型的初始化时,会生成一个新的只读变量</p>
+</li>
+<li>
+<p>操作引用就是操作变量本身</p>
+</li>
+<li>
+<p>extern C 告诉 C++ 编译器 以 C 语言的方式编译 但只是以 C 语言的函数命名方式 编译的,函数体还是 按 C++的方式编译, c++为了重载,函数名经过编译之后 会加上参数信息,因而编译后的函数名与源码中不同 C 语言的编译方式不允许函数重载</p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../1.C++/C++面向对象.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../1.C++/C++面向对象.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

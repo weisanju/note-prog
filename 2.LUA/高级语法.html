@@ -1,0 +1,617 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>高级语法</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">我的笔记库</a></li><li class="chapter-item expanded affix "><li class="part-title"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> C++</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1.C++/C++与C的区别.html"><strong aria-hidden="true">1.1.</strong> C++与C的区别</a></li><li class="chapter-item expanded "><a href="../1.C++/C++面向对象.html"><strong aria-hidden="true">1.2.</strong> C++面向对象</a></li><li class="chapter-item expanded "><a href="../1.C++/泛型编程.html"><strong aria-hidden="true">1.3.</strong> 泛型编程</a></li><li class="chapter-item expanded "><a href="../1.C++/cmake/index.html"><strong aria-hidden="true">1.4.</strong> cmake</a></li></ol></li><li class="chapter-item expanded "><a href="../2.LUA/index.html"><strong aria-hidden="true">2.</strong> LUA</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2.LUA/基本语法.html"><strong aria-hidden="true">2.1.</strong> 基本语法</a></li><li class="chapter-item expanded "><a href="../2.LUA/高级语法.html" class="active"><strong aria-hidden="true">2.2.</strong> 高级语法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> rust</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.rust/1常见编程概念.html"><strong aria-hidden="true">3.1.</strong> 1常见编程概念</a></li><li class="chapter-item expanded "><a href="../3.rust/2所有权.html"><strong aria-hidden="true">3.2.</strong> 2所有权</a></li><li class="chapter-item expanded "><a href="../3.rust/ConstantsAndVariables.html"><strong aria-hidden="true">3.3.</strong> ConstantsAndVariables</a></li><li class="chapter-item expanded "><a href="../3.rust/Rust中的Sizedness.html"><strong aria-hidden="true">3.4.</strong> Rust中的Sizedness</a></li><li class="chapter-item expanded "><a href="../3.rust/Rust库API设计文档规范.html"><strong aria-hidden="true">3.5.</strong> Rust库API设计文档规范</a></li><li class="chapter-item expanded "><a href="../3.rust/const类型与函数.html"><strong aria-hidden="true">3.6.</strong> const类型与函数</a></li><li class="chapter-item expanded "><a href="../3.rust/newType模式.html"><strong aria-hidden="true">3.7.</strong> newType模式</a></li><li class="chapter-item expanded "><a href="../3.rust/rust执行shell命令.html"><strong aria-hidden="true">3.8.</strong> rust执行shell命令</a></li><li class="chapter-item expanded "><a href="../3.rust/rust指针.html"><strong aria-hidden="true">3.9.</strong> rust指针</a></li><li class="chapter-item expanded "><a href="../3.rust/rust面向对象特性.html"><strong aria-hidden="true">3.10.</strong> rust面向对象特性</a></li><li class="chapter-item expanded "><a href="../3.rust/依赖管理.html"><strong aria-hidden="true">3.11.</strong> 依赖管理</a></li><li class="chapter-item expanded "><a href="../3.rust/函数式编程.html"><strong aria-hidden="true">3.12.</strong> 函数式编程</a></li><li class="chapter-item expanded "><a href="../3.rust/宏.html"><strong aria-hidden="true">3.13.</strong> 宏</a></li><li class="chapter-item expanded "><a href="../3.rust/常见集合.html"><strong aria-hidden="true">3.14.</strong> 常见集合</a></li><li class="chapter-item expanded "><a href="../3.rust/模式匹配.html"><strong aria-hidden="true">3.15.</strong> 模式匹配</a></li><li class="chapter-item expanded "><a href="../3.rust/泛型与trait.html"><strong aria-hidden="true">3.16.</strong> 泛型与trait</a></li><li class="chapter-item expanded "><a href="../3.rust/结构体.html"><strong aria-hidden="true">3.17.</strong> 结构体</a></li><li class="chapter-item expanded "><a href="../3.rust/迭代与闭包.html"><strong aria-hidden="true">3.18.</strong> 迭代与闭包</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.19.</strong> rfcs</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.rust/rfcs/0195_associated-items.html"><strong aria-hidden="true">3.19.1.</strong> 0195_associated-items</a></li><li class="chapter-item expanded "><a href="../3.rust/rfcs/0911-const-fn.html"><strong aria-hidden="true">3.19.2.</strong> 0911-const-fn</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> groovy</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../4.groovy/RuntimeAndCompile-timeMetaprogramming.html"><strong aria-hidden="true">4.1.</strong> RuntimeAndCompile-timeMetaprogramming</a></li><li class="chapter-item expanded "><a href="../4.groovy/基础语法.html"><strong aria-hidden="true">4.2.</strong> 基础语法</a></li><li class="chapter-item expanded "><a href="../4.groovy/开发工具类.html"><strong aria-hidden="true">4.3.</strong> 开发工具类</a></li><li class="chapter-item expanded "><a href="../4.groovy/操作符.html"><strong aria-hidden="true">4.4.</strong> 操作符</a></li><li class="chapter-item expanded "><a href="../4.groovy/编程结构.html"><strong aria-hidden="true">4.5.</strong> 编程结构</a></li></ol></li><li class="chapter-item expanded "><a href="../5.typescript/index.html"><strong aria-hidden="true">5.</strong> typescript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.typescript/1.基础类型.html"><strong aria-hidden="true">5.1.</strong> 基础类型</a></li><li class="chapter-item expanded "><a href="../5.typescript/2.变量声明.html"><strong aria-hidden="true">5.2.</strong> 变量声明</a></li><li class="chapter-item expanded "><a href="../5.typescript/3.接口.html"><strong aria-hidden="true">5.3.</strong> 接口</a></li><li class="chapter-item expanded "><a href="../5.typescript/4.模块.html"><strong aria-hidden="true">5.4.</strong> 模块</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/index.html"><strong aria-hidden="true">5.5.</strong> jtest测试框架</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Except.html"><strong aria-hidden="true">5.5.1.</strong> Except</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Globals.html"><strong aria-hidden="true">5.5.2.</strong> Globals</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Hook顺序.html"><strong aria-hidden="true">5.5.3.</strong> Hook顺序</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="迭代器"><a class="header" href="#迭代器">迭代器</a></h1>
+<h2 id="迭代器泛型"><a class="header" href="#迭代器泛型">迭代器泛型</a></h2>
+<p>迭代器泛型提供集合中每个元素的键值对。 下面给出一个简单的例子。</p>
+<pre><code class="language-lua">array = {&quot;Lua&quot;, &quot;Tutorial&quot;}
+
+for key,value in ipairs(array) 
+do
+   print(key, value)
+end
+
+
+####输出
+1  Lua
+2  Tutorial
+</code></pre>
+<p>上面的例子使用了Lua提供的默认<code>ipairs</code>迭代器函数。</p>
+<p>在Lua中，使用函数来表示迭代器。 基于这些迭代器函数中的状态维护，有两种主要类型 - </p>
+<ul>
+<li>无状态迭代器</li>
+<li>有状态迭代器</li>
+</ul>
+<h2 id="无状态迭代器"><a class="header" href="#无状态迭代器">无状态迭代器</a></h2>
+<pre><code class="language-lua">//迭代次数，初始值
+function square(iteratorMaxCount,currentNumber)
+//如果次数 小于给定最大次数
+   if currentNumber&lt;iteratorMaxCount
+   then
+      currentNumber = currentNumber+1 //改变 currentNumber
+      return currentNumber, currentNumber*currentNumber //返回当前值，以及控制值
+   end
+
+end
+
+for i,n in square,3,0
+do
+   print(i,n)
+end
+</code></pre>
+<pre><code class="language-lua">function square(iteratorMaxCount,currentNumber)
+
+   if currentNumber&lt;iteratorMaxCount
+   then
+      currentNumber = currentNumber+1
+      return currentNumber, currentNumber*currentNumber
+   end
+
+end
+
+function squares(iteratorMaxCount)
+   return square,iteratorMaxCount,0
+end  
+
+for i,n in squares(3)
+do 
+   print(i,n)
+end
+</code></pre>
+<h2 id="有状态迭代器"><a class="header" href="#有状态迭代器">有状态迭代器</a></h2>
+<pre><code class="language-lua">array = {&quot;Lua&quot;, &quot;Tutorial&quot;}
+
+function elementIterator (collection)
+
+   local index = 0
+   local count = #collection
+
+   -- The closure function is returned
+
+   return function ()
+      index = index + 1
+
+      if index &lt;= count
+      then
+         -- return the current element of the iterator
+         return collection[index]
+      end
+
+   end
+
+end
+
+for element in elementIterator(array)
+do
+   print(element)
+end
+</code></pre>
+<p>可使用闭包创建函数迭代器，如上所示，它可以为迭代整个集合的每个时间返回多个元素。</p>
+<h1 id="表"><a class="header" href="#表">表</a></h1>
+<p>表是Lua中唯一可用的数据结构，使用表可以创建不同的类型，如数组和字典。 </p>
+<p>Lua使用关联数组，不仅可使用数字编制索引，还可以使用除<code>nil</code>之外的字符串编制索引。 </p>
+<p>表没有固定的大小，可以根据需要增长大小。</p>
+<h2 id="表示和用法"><a class="header" href="#表示和用法">表示和用法</a></h2>
+<p>表称为对象，它既不是值也不是变量。 Lua使用构造函数表达式<code>{}</code>来创建一个空表</p>
+<pre><code>--sample table initialization
+mytable = {}
+
+--simple table value assignment
+mytable[1]= &quot;Lua&quot;
+
+--removing reference
+mytable = nil
+
+-- lua garbage collection will take care of releasing memory
+</code></pre>
+<pre><code class="language-lua">-- Simple empty table
+mytable = {}
+print(&quot;Type of mytable is &quot;,type(mytable))
+
+mytable[1]= &quot;Lua&quot;
+mytable[&quot;wow&quot;] = &quot;Tutorial&quot;
+
+print(&quot;mytable Element at index 1 is &quot;, mytable[1])
+print(&quot;mytable Element at index wow is &quot;, mytable[&quot;wow&quot;])
+
+-- alternatetable and mytable refers to same table
+alternatetable = mytable
+
+print(&quot;alternatetable Element at index 1 is &quot;, alternatetable[1])
+print(&quot;mytable Element at index wow is &quot;, alternatetable[&quot;wow&quot;])
+
+alternatetable[&quot;wow&quot;] = &quot;I changed it&quot;
+
+print(&quot;mytable Element at index wow is &quot;, mytable[&quot;wow&quot;])
+
+-- only variable released and and not table
+alternatetable = nil
+print(&quot;alternatetable is &quot;, alternatetable)
+
+-- mytable is still accessible
+print(&quot;mytable Element at index wow is &quot;, mytable[&quot;wow&quot;])
+
+mytable = nil
+print(&quot;mytable is &quot;, mytable)
+</code></pre>
+<h2 id="表操作"><a class="header" href="#表操作">表操作</a></h2>
+<p>下面是用于表操作的内置函数，它们列在下表格中。</p>
+<table><thead><tr><th>编号</th><th>方法</th><th>作用</th></tr></thead><tbody>
+<tr><td>1</td><td><code>table.concat (table [, sep [, i [, j]]])</code></td><td>根据给定的参数连接表中的字符串。详细信息请参见示例。</td></tr>
+<tr><td>2</td><td><code>table.insert (table, [pos,] value)</code></td><td>在指定位置的表中插入值。</td></tr>
+<tr><td>3</td><td><code>table.maxn (table)</code></td><td>返回最大的数字索引。</td></tr>
+<tr><td>4</td><td><code>table.remove (table [, pos])</code></td><td>从表中删除值。</td></tr>
+<tr><td>5</td><td><code>table.sort (table [, comp])</code></td><td>根据可选的比较器参数对表进行排序。</td></tr>
+</tbody></table>
+<h3 id="表连接"><a class="header" href="#表连接">表连接</a></h3>
+<pre><code>fruits = {&quot;banana&quot;,&quot;orange&quot;,&quot;apple&quot;}
+
+-- returns concatenated string of table
+print(&quot;Concatenated string &quot;,table.concat(fruits))
+
+--concatenate with a character
+print(&quot;Concatenated string &quot;,table.concat(fruits,&quot;, &quot;))
+
+--concatenate fruits based on index
+print(&quot;Concatenated string &quot;,table.concat(fruits,&quot;, &quot;, 2,3))
+</code></pre>
+<h3 id="插入和删除"><a class="header" href="#插入和删除">插入和删除</a></h3>
+<pre><code>fruits = {&quot;banana&quot;,&quot;orange&quot;,&quot;apple&quot;}
+
+-- insert a fruit at the end
+table.insert(fruits,&quot;mango&quot;)
+print(&quot;Fruit at index 4 is &quot;,fruits[4])
+
+--insert fruit at index 2
+table.insert(fruits,2,&quot;grapes&quot;)
+print(&quot;Fruit at index 2 is &quot;,fruits[2])
+
+print(&quot;The maximum elements in table is&quot;,table.maxn(fruits))
+
+print(&quot;The last element is&quot;,fruits[5])
+
+table.remove(fruits)
+print(&quot;The previous last element is&quot;,fruits[5])
+</code></pre>
+<h3 id="排序表"><a class="header" href="#排序表">排序表</a></h3>
+<pre><code>fruits = {&quot;banana&quot;,&quot;orange&quot;,&quot;apple&quot;,&quot;grapes&quot;}
+
+for k,v in ipairs(fruits) do
+   print(k,v)
+end
+
+table.sort(fruits)
+print(&quot;sorted table&quot;)
+
+for k,v in ipairs(fruits) do
+   print(k,v)
+end
+</code></pre>
+<h1 id="模块"><a class="header" href="#模块">模块</a></h1>
+<p>模块是一个可以使用<code>require</code>加载的库，并且只有一个包含表的全局名称。 模块可以包含许多功能和变量。 所有这些函数和变量都包含在表中，表充当命名空间。 此外，一个良好的模块有必要的子句，以在使用<code>require</code>语句时返回此表</p>
+<h2 id="lua模块的特色"><a class="header" href="#lua模块的特色">Lua模块的特色</a></h2>
+<pre><code class="language-lua">-- Assuming we have a module printFormatter
+-- Also printFormatter has a funtion simpleFormat(arg)
+-- Method 1
+require &quot;printFormatter&quot;
+printFormatter.simpleFormat(&quot;test&quot;)
+
+-- Method 2
+local formatter = require &quot;printFormatter&quot;
+formatter.simpleFormat(&quot;test&quot;)
+
+-- Method 3
+require &quot;printFormatter&quot;
+local formatterFunction = printFormatter.simpleFormat
+formatterFunction(&quot;test&quot;)		
+</code></pre>
+<h2 id="require函数"><a class="header" href="#require函数">require函数</a></h2>
+<p>Lua提供了一个名为<code>require</code>的高级函数来加载所有必需的模块。 它保持尽可能简单，以避免有太多关于模块的信息来加载。 <code>require</code>函数只是将模块假定为一块代码，它定义了一些值，实际上是包含函数或表。</p>
+<pre><code class="language-lua">local mymath =  {}
+
+function mymath.add(a,b)
+   print(a+b)
+end
+
+function mymath.sub(a,b)
+   print(a-b)
+end
+
+function mymath.mul(a,b)
+   print(a*b)
+end
+
+function mymath.div(a,b)
+   print(a/b)
+end
+
+return mymath
+</code></pre>
+<p>为了在另一个文件(例如，<code>moduletutorial.lua</code>)中访问此Lua模块</p>
+<pre><code class="language-lua">mymathmodule = require(&quot;mymath&quot;)
+mymathmodule.add(10,20)
+mymathmodule.sub(30,20)
+mymathmodule.mul(10,20)
+mymathmodule.div(30,20)
+</code></pre>
+<p>要运行此代码，需要将两个Lua文件放在同一目录中，或者，可以将模块文件放在包路径中，它需要额外的设置</p>
+<p><strong>注意事项</strong></p>
+<ul>
+<li>将运行的模块和文件放在同一目录中。</li>
+<li>模块名称及其文件名应相同。</li>
+<li>使用<code>require</code>函数返回模块，因此模块最好如上所示实现，尽管可以在其他地方找到其他类型的实现。</li>
+</ul>
+<h1 id="元表"><a class="header" href="#元表">元表</a></h1>
+<p>元表(<code>metatable</code>)是一个表，它是使用键集和相关元方法来修改附加到的表的行为。 这些元方法是强大的Lua功能，可实现如下功能 - </p>
+<ul>
+<li>在表上更改/添加功能到操作符。</li>
+<li>使用元表中的<code>__index</code>在表中没有键时查找元表。</li>
+<li>类似于操作符的重载</li>
+</ul>
+<p>在处理元表时有两种重要的方法，包括 - </p>
+<ul>
+<li><code>setmetatable(table，metatable)</code> - 此方法用于为表设置元表。</li>
+<li><code>getmetatable(table)</code> - 此方法用于获取表的元表。</li>
+</ul>
+<pre><code class="language-lua">mytable = {}
+mymetatable = {}
+setmetatable(mytable,mymetatable)
+-- 等价于
+mytable = setmetatable({},{})
+
+</code></pre>
+<h1 id="协同程序"><a class="header" href="#协同程序">协同程序</a></h1>
+<p>协同程序本质上是协作的，它允许两种或多种方法以受控方式执行。 使用协同程序，在任何给定时间，只有一个协同程序运行，并且此运行协程仅在显式请求暂停时暂停执行。</p>
+<p>上述定义可能看起来含糊不清。 假设有两种方法，一种是主程序方法，另一种是协程。 当使用<code>resume</code>函数调用一个协程时，它会开始执行，当调用<code>yield</code>函数时，它会暂停执行。 同样的协同程序可以继续执行另一个恢复函数调用，协同程序就会暂停。 该过程可以持续到协程执行结束。</p>
+<h2 id="协同程序函数"><a class="header" href="#协同程序函数">协同程序函数</a></h2>
+<p>下表列出了Lua中协程的所有可用函数及其相应的用法。</p>
+<table><thead><tr><th>编号</th><th>方法</th><th>作用或目的</th></tr></thead><tbody>
+<tr><td>1</td><td><code>coroutine.create (f)</code></td><td>使用函数<code>f</code>创建一个新的协同程序，并返回<code>thread</code>类型的对象。</td></tr>
+<tr><td>2</td><td><code>coroutine.resume (co [, val1, ...])</code></td><td>恢复协程<code>co</code>并传递参数(如果有的话)。它返回操作状态和可选的其他返回值。</td></tr>
+<tr><td>3</td><td><code>coroutine.running ()</code></td><td>如果在主线程中调用，则返回正在运行的协同程序或<code>nil</code>。</td></tr>
+<tr><td>4</td><td><code>coroutine.status (co)</code></td><td>根据协同程序的状态返回<code>running</code>，<code>normal</code>，<code>suspended</code>或<code>dead</code>中的一个值。</td></tr>
+<tr><td>5</td><td><code>coroutine.wrap (f)</code></td><td>与<code>coroutine.create</code>一样，<code>coroutine.wrap</code>函数也会创建一个协同程序，但它不会返回协同程序本身，而是返回一个函数，当调用它时，它会恢复协同程序。</td></tr>
+<tr><td>6</td><td><code>coroutine.yield (...)</code></td><td>暂停正在运行的协同程序。 传递给此方法的参数充当<code>resume</code>函数的附加返回值。</td></tr>
+</tbody></table>
+<ul>
+<li>value1`,value2的值由 第一次传递决定</li>
+<li><em>coroutine.yield(value1+1,value2+1)</em> 负责将两个参数传递出去</li>
+<li><em>coroutine.yield</em> 返回值 是由后续的 <em>resume</em> 调用决定</li>
+</ul>
+<pre><code class="language-lua">co = coroutine.create(function (value1,value2)
+   local tempvar3 = 10
+   print(&quot;coroutine section 1&quot;, value1, value2, tempvar3)
+
+   local tempvar1 = coroutine.yield(value1+1,value2+1)
+   tempvar3 = tempvar3 + value1
+   print(&quot;coroutine section 2&quot;,tempvar1 ,tempvar2, tempvar3)
+
+   local tempvar1, tempvar2= coroutine.yield(value1+value2, value1-value2)
+   tempvar3 = tempvar3 + value1
+   print(&quot;coroutine section 3&quot;,tempvar1,tempvar2, tempvar3)
+   return value2, &quot;end&quot;
+
+end)
+
+print(&quot;main&quot;, coroutine.resume(co, 3, 2))
+print(&quot;main&quot;, coroutine.resume(co, 12,14))
+print(&quot;main&quot;, coroutine.resume(co, 5, 6))
+print(&quot;main&quot;, coroutine.resume(co, 10, 20))
+</code></pre>
+<pre><code>coroutine section 1    3    2    10
+main    true    4    3
+coroutine section 2    12    nil    13
+main    true    5    1
+coroutine section 3    5    6    16
+main    true    2    end
+main    false    cannot resume dead coroutine
+</code></pre>
+<pre><code class="language-lua">function getNumber()
+   local function getNumberHelper()
+      co = coroutine.create(function ()
+      coroutine.yield(1)
+      coroutine.yield(2)
+      coroutine.yield(3)
+      coroutine.yield(4)
+      coroutine.yield(5)
+      end)
+      return co
+   end
+
+   if(numberHelper) then
+      status, number = coroutine.resume(numberHelper);
+
+      if coroutine.status(numberHelper) == &quot;dead&quot; then
+         numberHelper = getNumberHelper()
+         status, number = coroutine.resume(numberHelper);
+      end
+
+      return number
+   else
+      numberHelper = getNumberHelper()
+      status, number = coroutine.resume(numberHelper);
+      return number
+   end
+
+end
+
+for index = 1, 10 do
+   print(index, getNumber())
+end
+</code></pre>
+<h1 id="文件操作"><a class="header" href="#文件操作">文件操作</a></h1>
+<pre><code>file = io.open (filename [, mode])
+</code></pre>
+<p>下表列出了各种文件模式 - </p>
+<table><thead><tr><th>编号</th><th>模式</th><th>描述</th></tr></thead><tbody>
+<tr><td>1</td><td><code>r</code></td><td>只读模式，是打开现有文件的默认模式。</td></tr>
+<tr><td>2</td><td><code>w</code></td><td>写入启用模式，覆盖现有文件或创建新文件。</td></tr>
+<tr><td>3</td><td><code>a</code></td><td>附加模式，用于打开现有文件或创建新文件以进行追加。</td></tr>
+<tr><td>4</td><td><code>r+</code></td><td>现有文件的读写模式。</td></tr>
+<tr><td>5</td><td><code>w+</code></td><td>如果文件存在或创建具有读写权限的新文件，则删除所有现有数据。</td></tr>
+<tr><td>6</td><td><code>a+</code></td><td>启用了读取模式的追加模式可打开现有文件或创建新文件。</td></tr>
+</tbody></table>
+<h2 id="隐式文件描述符"><a class="header" href="#隐式文件描述符">隐式文件描述符</a></h2>
+<pre><code class="language-lua">-- Opens a file in read
+file = io.open(&quot;test.lua&quot;, &quot;r&quot;)
+
+-- sets the default input file as test.lua
+io.input(file)
+
+-- prints the first line of the file
+print(io.read())
+
+-- closes the open file
+io.close(file)
+
+-- Opens a file in append mode
+file = io.open(&quot;test.lua&quot;, &quot;a&quot;)
+
+-- sets the default output file as test.lua
+io.output(file)
+
+-- appends a word test to the last line of the file
+io.write(&quot;-- End of the test.lua file&quot;)
+
+-- closes the open file
+io.close(file)
+</code></pre>
+<p>在上面的示例中，可以使用<code>io.&quot;x&quot;</code>方法查看隐式描述符如何与文件系统一起使用。 上面的示例使用不带可选参数的<code>io.read()</code>方法。可选参数可以是以面中的任何一个。</p>
+<table><thead><tr><th>编号</th><th>模式</th><th>描述</th></tr></thead><tbody>
+<tr><td>1</td><td><code>*n</code></td><td>从当前文件位置读取并返回一个数字(如果存在于文件位置或返回<code>nil</code>)。</td></tr>
+<tr><td>2</td><td><code>*a</code></td><td>从当前文件位置返回文件的所有内容。</td></tr>
+<tr><td>3</td><td><code>*l</code></td><td>从当前文件位置读取行，并将文件位置移动到下一行。</td></tr>
+<tr><td>4</td><td><code>number</code></td><td>读取函数中指定的字节数。</td></tr>
+</tbody></table>
+<p>其他常见的<strong>I/O</strong>方法包括，</p>
+<ul>
+<li><code>io.tmpfile()</code> - 返回一个临时文件，用于读取和写入，当程序退出，将删除该文件。</li>
+<li><code>io.type(file)</code> - 根据输入文件返回文件，关闭文件或<code>nil</code>。</li>
+<li><code>io.flush()</code> - 清除默认输出缓冲区。</li>
+<li><code>io.lines(可选文件名)</code> - 提供循环迭代器的通用循环迭代器，循环遍历文件并最终关闭文件，以防提供文件名或使用默认文件而不在循环结束时关闭。</li>
+</ul>
+<h2 id="显式文件描述符"><a class="header" href="#显式文件描述符">显式文件描述符</a></h2>
+<p>显式文件描述符经常使用，它允许一次操作多个文件。 这些函数与隐式文件描述符非常相似。 在这里，使用<code>file：function_name</code>，而不是<code>io.function_name</code>。 下面显示了以下相同隐式文件描述符示例的显式文件描述符版本示例</p>
+<pre><code class="language-lua">-- Opens a file in read mode
+file = io.open(&quot;test.lua&quot;, &quot;r&quot;)
+
+-- prints the first line of the file
+print(file:read())
+
+-- closes the opened file
+file:close()
+
+-- Opens a file in append mode
+file = io.open(&quot;test.lua&quot;, &quot;a&quot;)
+
+-- appends a word test to the last line of the file
+file:write(&quot;--test&quot;)
+
+-- closes the open file
+file:close()
+</code></pre>
+<h2 id="其他常见的文件方法"><a class="header" href="#其他常见的文件方法">其他常见的文件方法</a></h2>
+<p><code>file:seek(optional whence, optional offset)</code> - 参数是<code>set</code>，<code>cur</code>或<code>end</code>。 使用文件开头的更新文件位置设置新文件指针。 在此函数中，偏移量为零。 如果第一个参数是<code>set</code>，则从文件的开头测量偏移量; 从文件中的当前位置开始，如果它是<code>cur</code>; 或者从文件的末尾开始，则它是<code>end</code>。 默认参数值为<code>cur</code>和<code>0</code>，因此可以通过不带参数调用此函数来获取当前文件位置。</p>
+<p><code>file:flush()</code> − 清除默认输出缓冲区。</p>
+<p><code>io.lines(optional file name)</code> - 提供循环迭代器的通用循环迭代器，循环遍历文件并最终关闭文件</p>
+<pre><code class="language-lua">-- Opens a file in read
+file = io.open(&quot;test.lua&quot;, &quot;r&quot;)
+
+file:seek(&quot;end&quot;,-25)
+print(file:read(&quot;*a&quot;))
+
+-- closes the opened file
+file:close()
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../2.LUA/基本语法.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../3.rust/1常见编程概念.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../2.LUA/基本语法.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../3.rust/1常见编程概念.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

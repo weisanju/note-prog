@@ -1,0 +1,645 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>宏</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">我的笔记库</a></li><li class="chapter-item expanded affix "><li class="part-title"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> C++</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1.C++/C++与C的区别.html"><strong aria-hidden="true">1.1.</strong> C++与C的区别</a></li><li class="chapter-item expanded "><a href="../1.C++/C++面向对象.html"><strong aria-hidden="true">1.2.</strong> C++面向对象</a></li><li class="chapter-item expanded "><a href="../1.C++/泛型编程.html"><strong aria-hidden="true">1.3.</strong> 泛型编程</a></li><li class="chapter-item expanded "><a href="../1.C++/cmake/index.html"><strong aria-hidden="true">1.4.</strong> cmake</a></li></ol></li><li class="chapter-item expanded "><a href="../2.LUA/index.html"><strong aria-hidden="true">2.</strong> LUA</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2.LUA/基本语法.html"><strong aria-hidden="true">2.1.</strong> 基本语法</a></li><li class="chapter-item expanded "><a href="../2.LUA/高级语法.html"><strong aria-hidden="true">2.2.</strong> 高级语法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> rust</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.rust/1常见编程概念.html"><strong aria-hidden="true">3.1.</strong> 1常见编程概念</a></li><li class="chapter-item expanded "><a href="../3.rust/2所有权.html"><strong aria-hidden="true">3.2.</strong> 2所有权</a></li><li class="chapter-item expanded "><a href="../3.rust/ConstantsAndVariables.html"><strong aria-hidden="true">3.3.</strong> ConstantsAndVariables</a></li><li class="chapter-item expanded "><a href="../3.rust/Rust中的Sizedness.html"><strong aria-hidden="true">3.4.</strong> Rust中的Sizedness</a></li><li class="chapter-item expanded "><a href="../3.rust/Rust库API设计文档规范.html"><strong aria-hidden="true">3.5.</strong> Rust库API设计文档规范</a></li><li class="chapter-item expanded "><a href="../3.rust/const类型与函数.html"><strong aria-hidden="true">3.6.</strong> const类型与函数</a></li><li class="chapter-item expanded "><a href="../3.rust/newType模式.html"><strong aria-hidden="true">3.7.</strong> newType模式</a></li><li class="chapter-item expanded "><a href="../3.rust/rust执行shell命令.html"><strong aria-hidden="true">3.8.</strong> rust执行shell命令</a></li><li class="chapter-item expanded "><a href="../3.rust/rust指针.html"><strong aria-hidden="true">3.9.</strong> rust指针</a></li><li class="chapter-item expanded "><a href="../3.rust/rust面向对象特性.html"><strong aria-hidden="true">3.10.</strong> rust面向对象特性</a></li><li class="chapter-item expanded "><a href="../3.rust/依赖管理.html"><strong aria-hidden="true">3.11.</strong> 依赖管理</a></li><li class="chapter-item expanded "><a href="../3.rust/函数式编程.html"><strong aria-hidden="true">3.12.</strong> 函数式编程</a></li><li class="chapter-item expanded "><a href="../3.rust/宏.html" class="active"><strong aria-hidden="true">3.13.</strong> 宏</a></li><li class="chapter-item expanded "><a href="../3.rust/常见集合.html"><strong aria-hidden="true">3.14.</strong> 常见集合</a></li><li class="chapter-item expanded "><a href="../3.rust/模式匹配.html"><strong aria-hidden="true">3.15.</strong> 模式匹配</a></li><li class="chapter-item expanded "><a href="../3.rust/泛型与trait.html"><strong aria-hidden="true">3.16.</strong> 泛型与trait</a></li><li class="chapter-item expanded "><a href="../3.rust/结构体.html"><strong aria-hidden="true">3.17.</strong> 结构体</a></li><li class="chapter-item expanded "><a href="../3.rust/迭代与闭包.html"><strong aria-hidden="true">3.18.</strong> 迭代与闭包</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.19.</strong> rfcs</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.rust/rfcs/0195_associated-items.html"><strong aria-hidden="true">3.19.1.</strong> 0195_associated-items</a></li><li class="chapter-item expanded "><a href="../3.rust/rfcs/0911-const-fn.html"><strong aria-hidden="true">3.19.2.</strong> 0911-const-fn</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> groovy</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../4.groovy/RuntimeAndCompile-timeMetaprogramming.html"><strong aria-hidden="true">4.1.</strong> RuntimeAndCompile-timeMetaprogramming</a></li><li class="chapter-item expanded "><a href="../4.groovy/基础语法.html"><strong aria-hidden="true">4.2.</strong> 基础语法</a></li><li class="chapter-item expanded "><a href="../4.groovy/开发工具类.html"><strong aria-hidden="true">4.3.</strong> 开发工具类</a></li><li class="chapter-item expanded "><a href="../4.groovy/操作符.html"><strong aria-hidden="true">4.4.</strong> 操作符</a></li><li class="chapter-item expanded "><a href="../4.groovy/编程结构.html"><strong aria-hidden="true">4.5.</strong> 编程结构</a></li></ol></li><li class="chapter-item expanded "><a href="../5.typescript/index.html"><strong aria-hidden="true">5.</strong> typescript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.typescript/1.基础类型.html"><strong aria-hidden="true">5.1.</strong> 基础类型</a></li><li class="chapter-item expanded "><a href="../5.typescript/2.变量声明.html"><strong aria-hidden="true">5.2.</strong> 变量声明</a></li><li class="chapter-item expanded "><a href="../5.typescript/3.接口.html"><strong aria-hidden="true">5.3.</strong> 接口</a></li><li class="chapter-item expanded "><a href="../5.typescript/4.模块.html"><strong aria-hidden="true">5.4.</strong> 模块</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/index.html"><strong aria-hidden="true">5.5.</strong> jtest测试框架</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Except.html"><strong aria-hidden="true">5.5.1.</strong> Except</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Globals.html"><strong aria-hidden="true">5.5.2.</strong> Globals</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Hook顺序.html"><strong aria-hidden="true">5.5.3.</strong> Hook顺序</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="宏"><a class="header" href="#宏">宏</a></h1>
+<blockquote>
+<p><strong>宏</strong>（<em>Macro</em>）指的是 Rust 中一系列的功能</p>
+</blockquote>
+<h2 id="声明declarative宏"><a class="header" href="#声明declarative宏"><strong>声明（<em>Declarative</em>）宏</strong></a></h2>
+<h2 id="定义宏-macro_rules"><a class="header" href="#定义宏-macro_rules">定义宏 <code>macro_rules!</code></a></h2>
+<h2 id="实例"><a class="header" href="#实例"><strong>实例</strong></a></h2>
+<p><em>vec!</em> 实现</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span>
+<span class="boring">fn main() {
+</span>#[macro_export]
+macro_rules! vec {
+    ( $( $x:expr ),* ) =&gt; {
+        {
+            let mut temp_vec = Vec::new();
+            $(
+                temp_vec.push($x);
+            )*
+            temp_vec
+        }
+    };
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="三种-过程procedural宏"><a class="header" href="#三种-过程procedural宏">三种 <strong>过程</strong>（<em>Procedural</em>）宏</a></h2>
+<p><strong>自定义派生（derive）</strong></p>
+<p><strong>类属性</strong></p>
+<p><strong>类函数</strong></p>
+<h1 id="宏原理"><a class="header" href="#宏原理">宏原理</a></h1>
+<h2 id="源分析"><a class="header" href="#源分析">源分析</a></h2>
+<h3 id="tokenisation"><a class="header" href="#tokenisation"><strong>tokenisation</strong></a></h3>
+<ul>
+<li>
+<p>编译的第一个阶段就是 词汇化(<code>tokenisation</code>)</p>
+</li>
+<li>
+<p>将源代码转换为一系列不可分割的 词语单元</p>
+</li>
+<li>
+<p>rust的各种各样的词法单元</p>
+<ul>
+<li>自定义标识符  <code>foo</code>, <code>Bambous</code>, <code>self</code>, <code>we_can_dance</code>, <code>LaCaravane</code>, …</li>
+<li>整型字面量 : <code>42</code>, <code>72u32</code>, <code>0_______0</code>, …</li>
+<li>关键字: <code>_</code>, <code>fn</code>, <code>self</code>, <code>match</code>, <code>yield</code>, <code>macro</code>, …</li>
+<li>申明周期标识符: <code>'a</code>, <code>'b</code>, <code>'a_rare_long_lifetime_name</code>, …</li>
+<li>字符串字面量: <code>&quot;&quot;</code>, <code>&quot;Leicester&quot;</code>, <code>r##&quot;venezuelan beaver&quot;##</code>, …</li>
+<li>符号: <code>[</code>, <code>:</code>, <code>::</code>, <code>-&gt;</code>, <code>@</code>, <code>&lt;-</code>, …</li>
+</ul>
+</li>
+</ul>
+<h3 id="parsing"><a class="header" href="#parsing">parsing</a></h3>
+<p>下一个阶段是转换 将一系列的 tokens 转换成 AST(Abstract Syntax Tree)</p>
+<ul>
+<li>会在内存中 构建 程序 的语法结构</li>
+<li>例如 1+2 在内存中的结构如下</li>
+<li>AST结构 包含了整个程序</li>
+</ul>
+<pre><code class="language-text">┌─────────┐   ┌─────────┐
+│ BinOp   │ ┌╴│ LitInt  │
+│ op: Add │ │ │ val: 1  │
+│ lhs: ◌  │╶┘ └─────────┘
+│ rhs: ◌  │╶┐ ┌─────────┐
+└─────────┘ └╴│ LitInt  │
+              │ val: 2  │
+              └─────────┘
+</code></pre>
+<h3 id="token-trees"><a class="header" href="#token-trees">Token trees</a></h3>
+<ul>
+<li>token tree 是介于 tokens 和 AST 之间的一种结构</li>
+<li>首先,大部分token都是 toeknTree 中的叶子结点 </li>
+<li>唯一不是叶子结点的 token 是 <code>(...), [...], and {...}</code> 又 称 <em>grouping</em> ,它们是 token tree 的内部 非叶子结点</li>
+<li>例如</li>
+</ul>
+<pre><code>a + b + (c + d[0]) + e
+</code></pre>
+<p>would be parsed into the following token trees:</p>
+<pre><code class="language-text">«a» «+» «b» «+» «(   )» «+» «e»
+          ╭────────┴──────────╮
+           «c» «+» «d» «[   ]»
+                        ╭─┴─╮
+                         «0»
+</code></pre>
+<p>Note that this has <em>no relationship</em> to the AST the expression would produce; instead of a single root node, there are <em>nine</em> token trees at the root level. For reference, the AST would be:</p>
+<pre><code class="language-text">              ┌─────────┐
+              │ BinOp   │
+              │ op: Add │
+            ┌╴│ lhs: ◌  │
+┌─────────┐ │ │ rhs: ◌  │╶┐ ┌─────────┐
+│ Var     │╶┘ └─────────┘ └╴│ BinOp   │
+│ name: a │                 │ op: Add │
+└─────────┘               ┌╴│ lhs: ◌  │
+              ┌─────────┐ │ │ rhs: ◌  │╶┐ ┌─────────┐
+              │ Var     │╶┘ └─────────┘ └╴│ BinOp   │
+              │ name: b │                 │ op: Add │
+              └─────────┘               ┌╴│ lhs: ◌  │
+                            ┌─────────┐ │ │ rhs: ◌  │╶┐ ┌─────────┐
+                            │ BinOp   │╶┘ └─────────┘ └╴│ Var     │
+                            │ op: Add │                 │ name: e │
+                          ┌╴│ lhs: ◌  │                 └─────────┘
+              ┌─────────┐ │ │ rhs: ◌  │╶┐ ┌─────────┐
+              │ Var     │╶┘ └─────────┘ └╴│ Index   │
+              │ name: c │               ┌╴│ arr: ◌  │
+              └─────────┘   ┌─────────┐ │ │ ind: ◌  │╶┐ ┌─────────┐
+                            │ Var     │╶┘ └─────────┘ └╴│ LitInt  │
+                            │ name: d │                 │ val: 0  │
+                            └─────────┘                 └─────────┘
+</code></pre>
+<p><strong>tokenTree 与 AST 的差别 要理解</strong></p>
+<p><strong>写宏时会涉及到这两个结构</strong></p>
+<p><strong>方括号,括号,花括号 必须要配对</strong></p>
+<h2 id="ast中的宏"><a class="header" href="#ast中的宏">AST中的宏</a></h2>
+<p><strong>宏处理发生在AST构建好之后</strong></p>
+<p><strong>宏使用语法</strong></p>
+<ul>
+<li><code># [ $arg ]</code>; <em>e.g.</em> <code>#[derive(Clone)]</code>, <code>#[no_mangle]</code>, …</li>
+<li><code># ! [ $arg ]</code>; <em>e.g.</em> <code>#![allow(dead_code)]</code>, <code>#![crate_name=&quot;blang&quot;]</code>, …</li>
+<li><code>$name ! $arg</code>; <em>e.g.</em> <code>println!(&quot;Hi!&quot;)</code>, <code>concat!(&quot;a&quot;, &quot;b&quot;)</code>, …</li>
+<li><code>$name ! $arg0 $arg1</code>; <em>e.g.</em> <code>macro_rules! dummy { () =&gt; {}; }</code>.</li>
+</ul>
+<p>头两个是 <em>attribute</em>,目前暂无法定义这两种形式</p>
+<p>最后一种 只有  <code>macro_rules!</code>宏 是这种形式</p>
+<p>只考虑第三种</p>
+<pre><code>bitflags! {
+    flags Color: u8 {
+        const RED    = 0b0001,
+        const GREEN  = 0b0010,
+        const BLUE   = 0b0100,
+        const BRIGHT = 0b1000,
+    }
+}
+
+lazy_static! {
+    static ref FIB_100: u32 = {
+        fn fib(a: u32) -&gt; u32 {
+            match a {
+                0 =&gt; 0,
+                1 =&gt; 1,
+                a =&gt; fib(a-1) + fib(a-2)
+            }
+        }
+
+        fib(100)
+    };
+}
+
+fn main() {
+    let colors = vec![RED, GREEN, BLUE];
+    println!(&quot;Hello, World!&quot;);
+}
+</code></pre>
+<p>Although the above invocations may <em>look</em> like they contain various kinds of Rust code, the parser simply sees a collection of meaningless token trees. To make this clearer, we can replace all these syntactic &quot;black boxes&quot; with ⬚, leaving us with:</p>
+<pre><code class="language-text">bitflags! ⬚
+
+lazy_static! ⬚
+
+fn main() {
+    let colors = vec! ⬚;
+    println! ⬚;
+}
+</code></pre>
+<p>重点是:</p>
+<ul>
+<li>rust有各种各样的语法扩展, 现在只讨论  <code>macro_rules!</code> 定义的约定</li>
+<li><code>$name! $arg</code> 这种形式可能不是 宏, 而是某种形式的语法扩展</li>
+<li>对 宏的输入 是一个 单一的 非叶子结点的 token tree</li>
+</ul>
+<p>宏只能出现在 明确定义支持的地方</p>
+<ul>
+<li>Patterns , 模式匹配</li>
+<li>Statements 语句</li>
+<li>Expressions 表达式</li>
+<li>Items </li>
+<li><code>impl</code> Items</li>
+</ul>
+<h2 id="展开"><a class="header" href="#展开">展开</a></h2>
+<p>遍历AST, 定位 宏 然后展开</p>
+<pre><code>let eight = 2 * four!();
+</code></pre>
+<p>We can visualise this partial AST as follows:</p>
+<pre><code class="language-text">┌─────────────┐
+│ Let         │
+│ name: eight │   ┌─────────┐
+│ init: ◌     │╶─╴│ BinOp   │
+└─────────────┘   │ op: Mul │
+                ┌╴│ lhs: ◌  │
+     ┌────────┐ │ │ rhs: ◌  │╶┐ ┌────────────┐
+     │ LitInt │╶┘ └─────────┘ └╴│ Macro      │
+     │ val: 2 │                 │ name: four │
+     └────────┘                 │ body: ()   │
+                                └────────────┘
+</code></pre>
+<p>从上下文得知, 宏展开成一个 表达式</p>
+<pre><code class="language-text">┌─────────────┐
+│ Let         │
+│ name: eight │   ┌─────────┐
+│ init: ◌     │╶─╴│ BinOp   │
+└─────────────┘   │ op: Mul │
+                ┌╴│ lhs: ◌  │
+     ┌────────┐ │ │ rhs: ◌  │╶┐ ┌─────────┐
+     │ LitInt │╶┘ └─────────┘ └╴│ BinOp   │
+     │ val: 2 │                 │ op: Add │
+     └────────┘               ┌╴│ lhs: ◌  │
+                   ┌────────┐ │ │ rhs: ◌  │╶┐ ┌────────┐
+                   │ LitInt │╶┘ └─────────┘ └╴│ LitInt │
+                   │ val: 1 │                 │ val: 3 │
+                   └────────┘                 └────────┘
+</code></pre>
+<p>This can be written out like so:</p>
+<pre><code>let eight = 2 * (1 + 3);
+</code></pre>
+<ul>
+<li>宏展开会被当成语法 一个 AST的 node</li>
+<li>宏还可以展开成 宏 , 递归宏 展开是有限度的, 默认最大32 #![recursion_limit=&quot;…&quot;]</li>
+</ul>
+<h1 id="macro_rules"><a class="header" href="#macro_rules">macro_rules!</a></h1>
+<h2 id="语法"><a class="header" href="#语法">语法</a></h2>
+<p><code>macro_rules!</code> 是自身的一个语法扩展, 不是rust的语法</p>
+<pre><code>macro_rules! $name {
+    $rule0 ;
+    $rule1 ;
+    // …
+    $ruleN ;
+}
+</code></pre>
+<p>至少有一个<code>rule</code> 最后一个<code>rule</code> 的分号可以省略</p>
+<p>每一个<code>rule</code>的定义为</p>
+<pre><code>    ($pattern) =&gt; {$expansion}
+</code></pre>
+<p>pattern周围的 <code>()</code> 和 expression 的 <code>{}</code> 是用来分组的, 可以任意替换使用</p>
+<h2 id="matching"><a class="header" href="#matching">Matching</a></h2>
+<p><strong>空模式</strong></p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>macro_rules! four {
+    () =&gt; {1 + 3};
+}
+//four!(), four![] or four!{} 都行
+<span class="boring">}
+</span></code></pre></pre>
+<p>匹配时不会考虑, 分组符号</p>
+<p>模式同样能包好 字面 tokenTree ,必须精确匹配,通过简单正常编写 token tree 来完成</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>//例如
+macro_rules! gibberish {
+    (4 fn ['spang &quot;whammo&quot;] @_@) =&gt; {...};
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="captures"><a class="header" href="#captures">Captures</a></h2>
+<p><strong>捕获标识</strong> 用  <code>$self_variable: type</code></p>
+<p>type只能是以下几种</p>
+<ul>
+<li><code>item</code>: an item, like a function, struct, module, etc.</li>
+<li><code>block</code>: a block (i.e. a block of statements and/or an expression, surrounded by braces)</li>
+<li><code>stmt</code>: a statement</li>
+<li><code>pat</code>: a pattern</li>
+<li><code>expr</code>: an expression</li>
+<li><code>ty</code>: a type</li>
+<li><code>ident</code>: an identifier</li>
+<li><code>path</code>: a path (e.g. <code>foo</code>, <code>::std::mem::replace</code>, <code>transmute::&lt;_, int&gt;</code>, …)</li>
+<li><code>meta</code>: a meta item; the things that go inside <code>#[...]</code> and <code>#![...]</code> attributes</li>
+<li><code>tt</code>: a single token tree</li>
+</ul>
+<p>For example, here is a macro which captures its input as an expression:</p>
+<pre><code>macro_rules! one_expression {
+    ($e:expr) =&gt; {...};
+}
+</code></pre>
+<p>A capture <code>$name:kind</code> can be substituted into the expansion by writing <code>$name</code>. For example:</p>
+<pre><code>macro_rules! times_five {
+    ($e:expr) =&gt; {5 * $e};
+}
+</code></pre>
+<p><strong>多捕获</strong></p>
+<pre><code>macro_rules! multiply_add {
+    ($a:expr, $b:expr, $c:expr) =&gt; {$a * ($b + $c)};
+}
+</code></pre>
+<h2 id="repetitions"><a class="header" href="#repetitions"><a href="https://danielkeep.github.io/tlborm/book/mbe-macro-rules.html#repetitions">Repetitions</a></a></h2>
+<p>重复标识</p>
+<p>These allow a sequence of tokens to be matched. These have the general form</p>
+<p><code>$ ( ... ) sep rep</code></p>
+<ul>
+<li><code>$</code> is a literal dollar token.</li>
+<li><code>( ... )</code> is the paren-grouped pattern being repeated.</li>
+<li><code>sep</code> is an <em>optional</em> separator token. Common examples are <code>,</code>, and <code>;</code>.</li>
+<li><code>rep</code> is   <code>*</code>  或者 <code>+</code></li>
+</ul>
+<pre><code>macro_rules! vec_strs {
+    (
+        // Start a repetition:
+        $(
+            // Each repeat must contain an expression...
+            $element:expr
+        )
+        // ...separated by commas...
+        ,
+        // ...zero or more times.
+        *
+    ) =&gt; {
+        // Enclose the expansion in a block so that we can use
+        // multiple statements.
+        {
+            let mut v = Vec::new();
+
+            // Start a repetition:
+            $(
+                // Each repeat will contain the following statement, with
+                // $element replaced with the corresponding expression.
+                v.push(format!(&quot;{}&quot;, $element));
+            )*
+
+            v
+        }
+    };
+}
+</code></pre>
+<h2 id="captures-and-expansion-redux"><a class="header" href="#captures-and-expansion-redux">Captures and Expansion Redux</a></h2>
+<h3 id="第二个规则永远也不会匹配"><a class="header" href="#第二个规则永远也不会匹配"><strong>第二个规则永远也不会匹配</strong></a></h3>
+<p>因为一个ident也是也是一个expr</p>
+<pre><code>macro_rules! dead_rule {
+    ($e:expr) =&gt; { ... };
+    ($i:ident +) =&gt; { ... };
+}
+</code></pre>
+<p>规则匹配的广度</p>
+<ul>
+<li><code>item</code>: anything.</li>
+<li><code>block</code>: anything.</li>
+<li><code>stmt</code>: <code>=&gt;</code> <code>,</code> <code>;</code></li>
+<li><code>pat</code>: <code>=&gt;</code> <code>,</code> <code>=</code> <code>if</code> <code>in</code></li>
+<li><code>expr</code>: <code>=&gt;</code> <code>,</code> <code>;</code></li>
+<li><code>ty</code>: <code>,</code> <code>=&gt;</code> <code>:</code> <code>=</code> <code>&gt;</code> <code>;</code> <code>as</code></li>
+<li><code>ident</code>: anything.</li>
+<li><code>path</code>: <code>,</code> <code>=&gt;</code> <code>:</code> <code>=</code> <code>&gt;</code> <code>;</code> <code>as</code></li>
+<li><code>meta</code>: anything.</li>
+<li><code>tt</code>: anything.</li>
+</ul>
+<p>Additionally, <code>macro_rules!</code> generally forbids a repetition to be followed by another repetition, even if the contents do not conflict.</p>
+<h3 id="捕获之后无法重新被捕获"><a class="header" href="#捕获之后无法重新被捕获">捕获之后无法重新被捕获</a></h3>
+<p>One aspect of substitution that often surprises people is that substitution is <em>not</em> token-based, despite very much <em>looking</em> like it. Here is a simple demonstration:</p>
+<pre><code>macro_rules! capture_expr_then_stringify {
+    ($e:expr) =&gt; {
+        stringify!($e)
+    };
+}
+
+fn main() {
+    println!(&quot;{:?}&quot;, stringify!(dummy(2 * (1 + (3)))));
+    println!(&quot;{:?}&quot;, capture_expr_then_stringify!(dummy(2 * (1 + (3)))));
+}
+</code></pre>
+<p>Note that <code>stringify!</code> is a built-in syntax extension which simply takes all tokens it is given and concatenates them into one big string.</p>
+<p>The output when run is:</p>
+<pre><code class="language-text">&quot;dummy ( 2 * ( 1 + ( 3 ) ) )&quot;
+&quot;dummy(2 * (1 + (3)))&quot;
+</code></pre>
+<p>Note that <em>despite</em> having the same input, the output is different. This is because the first invocation is stringifying a sequence of token trees, whereas the second is stringifying <em>an AST expression node</em>.</p>
+<p>To visualise the difference another way, here is what the <code>stringify!</code> macro gets invoked with in the first case:</p>
+<pre><code class="language-text">«dummy» «(   )»
+   ╭───────┴───────╮
+    «2» «*» «(   )»
+       ╭───────┴───────╮
+        «1» «+» «(   )»
+                 ╭─┴─╮
+                  «3»
+</code></pre>
+<p>…and here is what it gets invoked with in the second case:</p>
+<pre><code class="language-text">« »
+ │ ┌─────────────┐
+ └╴│ Call        │
+   │ fn: dummy   │   ┌─────────┐
+   │ args: ◌     │╶─╴│ BinOp   │
+   └─────────────┘   │ op: Mul │
+                   ┌╴│ lhs: ◌  │
+        ┌────────┐ │ │ rhs: ◌  │╶┐ ┌─────────┐
+        │ LitInt │╶┘ └─────────┘ └╴│ BinOp   │
+        │ val: 2 │                 │ op: Add │
+        └────────┘               ┌╴│ lhs: ◌  │
+                      ┌────────┐ │ │ rhs: ◌  │╶┐ ┌────────┐
+                      │ LitInt │╶┘ └─────────┘ └╴│ LitInt │
+                      │ val: 1 │                 │ val: 3 │
+                      └────────┘                 └────────┘
+</code></pre>
+<p>As you can see, there is exactly <em>one</em> token tree, which contains the AST which was parsed from the input to the <code>capture_expr_then_stringify!</code> invocation. Hence, what you see in the output is not the stringified tokens, it's the stringified <em>AST node</em>.</p>
+<p>This has further implications. Consider the following:</p>
+<pre><code>macro_rules! capture_then_match_tokens {
+    ($e:expr) =&gt; {match_tokens!($e)};
+}
+
+macro_rules! match_tokens {
+    ($a:tt + $b:tt) =&gt; {&quot;got an addition&quot;};
+    (($i:ident)) =&gt; {&quot;got an identifier&quot;};
+    ($($other:tt)*) =&gt; {&quot;got something else&quot;};
+}
+
+fn main() {
+    println!(&quot;{}\n{}\n{}\n&quot;,
+        match_tokens!((caravan)),
+        match_tokens!(3 + 6),
+        match_tokens!(5));
+    println!(&quot;{}\n{}\n{}&quot;,
+        capture_then_match_tokens!((caravan)),
+        capture_then_match_tokens!(3 + 6),
+        capture_then_match_tokens!(5));
+}
+</code></pre>
+<p>The output is:</p>
+<pre><code class="language-text">got an identifier
+got an addition
+got something else
+
+got something else
+got something else
+got something else
+</code></pre>
+<p><strong>By parsing the input into an AST node, the substituted result becomes <em>un-destructible</em></strong>; <em>i.e.</em> you cannot examine the contents or match against it ever again.</p>
+<p>Here is <em>another</em> example which can be particularly confusing:</p>
+<pre><code>macro_rules! capture_then_what_is {
+    (#[$m:meta]) =&gt; {what_is!(#[$m])};
+}
+
+macro_rules! what_is {
+    (#[no_mangle]) =&gt; {&quot;no_mangle attribute&quot;};
+    (#[inline]) =&gt; {&quot;inline attribute&quot;};
+    ($($tts:tt)*) =&gt; {concat!(&quot;something else (&quot;, stringify!($($tts)*), &quot;)&quot;)};
+}
+
+fn main() {
+    println!(
+        &quot;{}\n{}\n{}\n{}&quot;,
+        what_is!(#[no_mangle]),
+        what_is!(#[inline]),
+        capture_then_what_is!(#[no_mangle]),
+        capture_then_what_is!(#[inline]),
+    );
+}
+</code></pre>
+<p>The output is:</p>
+<pre><code class="language-text">no_mangle attribute
+inline attribute
+something else (# [ no_mangle ])
+something else (# [ inline ])
+</code></pre>
+<p>The only way to avoid this is to capture using the <code>tt</code> or <code>ident</code> kinds. Once you capture with anything else, the only thing you can do with the result from then on is substitute it directly into the output.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../3.rust/函数式编程.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../3.rust/常见集合.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../3.rust/函数式编程.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../3.rust/常见集合.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

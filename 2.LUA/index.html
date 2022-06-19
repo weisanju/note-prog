@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>LUA</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">我的笔记库</a></li><li class="chapter-item expanded affix "><li class="part-title"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> C++</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1.C++/C++与C的区别.html"><strong aria-hidden="true">1.1.</strong> C++与C的区别</a></li><li class="chapter-item expanded "><a href="../1.C++/C++面向对象.html"><strong aria-hidden="true">1.2.</strong> C++面向对象</a></li><li class="chapter-item expanded "><a href="../1.C++/泛型编程.html"><strong aria-hidden="true">1.3.</strong> 泛型编程</a></li><li class="chapter-item expanded "><a href="../1.C++/cmake/index.html"><strong aria-hidden="true">1.4.</strong> cmake</a></li></ol></li><li class="chapter-item expanded "><a href="../2.LUA/index.html" class="active"><strong aria-hidden="true">2.</strong> LUA</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2.LUA/基本语法.html"><strong aria-hidden="true">2.1.</strong> 基本语法</a></li><li class="chapter-item expanded "><a href="../2.LUA/高级语法.html"><strong aria-hidden="true">2.2.</strong> 高级语法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> rust</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.rust/1常见编程概念.html"><strong aria-hidden="true">3.1.</strong> 1常见编程概念</a></li><li class="chapter-item expanded "><a href="../3.rust/2所有权.html"><strong aria-hidden="true">3.2.</strong> 2所有权</a></li><li class="chapter-item expanded "><a href="../3.rust/ConstantsAndVariables.html"><strong aria-hidden="true">3.3.</strong> ConstantsAndVariables</a></li><li class="chapter-item expanded "><a href="../3.rust/Rust中的Sizedness.html"><strong aria-hidden="true">3.4.</strong> Rust中的Sizedness</a></li><li class="chapter-item expanded "><a href="../3.rust/Rust库API设计文档规范.html"><strong aria-hidden="true">3.5.</strong> Rust库API设计文档规范</a></li><li class="chapter-item expanded "><a href="../3.rust/const类型与函数.html"><strong aria-hidden="true">3.6.</strong> const类型与函数</a></li><li class="chapter-item expanded "><a href="../3.rust/newType模式.html"><strong aria-hidden="true">3.7.</strong> newType模式</a></li><li class="chapter-item expanded "><a href="../3.rust/rust执行shell命令.html"><strong aria-hidden="true">3.8.</strong> rust执行shell命令</a></li><li class="chapter-item expanded "><a href="../3.rust/rust指针.html"><strong aria-hidden="true">3.9.</strong> rust指针</a></li><li class="chapter-item expanded "><a href="../3.rust/rust面向对象特性.html"><strong aria-hidden="true">3.10.</strong> rust面向对象特性</a></li><li class="chapter-item expanded "><a href="../3.rust/依赖管理.html"><strong aria-hidden="true">3.11.</strong> 依赖管理</a></li><li class="chapter-item expanded "><a href="../3.rust/函数式编程.html"><strong aria-hidden="true">3.12.</strong> 函数式编程</a></li><li class="chapter-item expanded "><a href="../3.rust/宏.html"><strong aria-hidden="true">3.13.</strong> 宏</a></li><li class="chapter-item expanded "><a href="../3.rust/常见集合.html"><strong aria-hidden="true">3.14.</strong> 常见集合</a></li><li class="chapter-item expanded "><a href="../3.rust/模式匹配.html"><strong aria-hidden="true">3.15.</strong> 模式匹配</a></li><li class="chapter-item expanded "><a href="../3.rust/泛型与trait.html"><strong aria-hidden="true">3.16.</strong> 泛型与trait</a></li><li class="chapter-item expanded "><a href="../3.rust/结构体.html"><strong aria-hidden="true">3.17.</strong> 结构体</a></li><li class="chapter-item expanded "><a href="../3.rust/迭代与闭包.html"><strong aria-hidden="true">3.18.</strong> 迭代与闭包</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.19.</strong> rfcs</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3.rust/rfcs/0195_associated-items.html"><strong aria-hidden="true">3.19.1.</strong> 0195_associated-items</a></li><li class="chapter-item expanded "><a href="../3.rust/rfcs/0911-const-fn.html"><strong aria-hidden="true">3.19.2.</strong> 0911-const-fn</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> groovy</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../4.groovy/RuntimeAndCompile-timeMetaprogramming.html"><strong aria-hidden="true">4.1.</strong> RuntimeAndCompile-timeMetaprogramming</a></li><li class="chapter-item expanded "><a href="../4.groovy/基础语法.html"><strong aria-hidden="true">4.2.</strong> 基础语法</a></li><li class="chapter-item expanded "><a href="../4.groovy/开发工具类.html"><strong aria-hidden="true">4.3.</strong> 开发工具类</a></li><li class="chapter-item expanded "><a href="../4.groovy/操作符.html"><strong aria-hidden="true">4.4.</strong> 操作符</a></li><li class="chapter-item expanded "><a href="../4.groovy/编程结构.html"><strong aria-hidden="true">4.5.</strong> 编程结构</a></li></ol></li><li class="chapter-item expanded "><a href="../5.typescript/index.html"><strong aria-hidden="true">5.</strong> typescript</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.typescript/1.基础类型.html"><strong aria-hidden="true">5.1.</strong> 基础类型</a></li><li class="chapter-item expanded "><a href="../5.typescript/2.变量声明.html"><strong aria-hidden="true">5.2.</strong> 变量声明</a></li><li class="chapter-item expanded "><a href="../5.typescript/3.接口.html"><strong aria-hidden="true">5.3.</strong> 接口</a></li><li class="chapter-item expanded "><a href="../5.typescript/4.模块.html"><strong aria-hidden="true">5.4.</strong> 模块</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/index.html"><strong aria-hidden="true">5.5.</strong> jtest测试框架</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Except.html"><strong aria-hidden="true">5.5.1.</strong> Except</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Globals.html"><strong aria-hidden="true">5.5.2.</strong> Globals</a></li><li class="chapter-item expanded "><a href="../5.typescript/jtest测试框架/Hook顺序.html"><strong aria-hidden="true">5.5.3.</strong> Hook顺序</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="概述"><a class="header" href="#概述">概述</a></h1>
+<p>Lua是一种用C语言编写的可扩展，轻量级的编程语言。它于1993年由Roberto Ierusalimschy，Luiz Henrique de Figueiredo和Waldemar Celes作为内部项目开始研发。</p>
+<p>Lua从一开始就设计成一个可以与用C语言和其他传统语言编写的代码集成的软件。 这种集成带来许多好处。 Lua并没有尝试做C语言已经做过的事情，而是提供C语言不擅长的东西：与硬件的良好距离，动态结构，无冗余，易于测试和调试。 为此，Lua是具有安全的环境，自动内存管理以及用于处理动态大小的字符串和其他类型数据的良好工具。</p>
+<h1 id="lua特征"><a class="header" href="#lua特征">Lua特征</a></h1>
+<p>扩展</p>
+<p>简单</p>
+<p>高效</p>
+<p>可移植</p>
+<p>免费开放源码</p>
+<h1 id="lua是如何实现的"><a class="header" href="#lua是如何实现的">Lua是如何实现的？</a></h1>
+<p>Lua由两部分组成 -  Lua解释器部分和功能软件系统。 功能正常的软件系统是一个实际的计算机应用程序，可以解释用Lua编程语言编写的程序。 Lua解释器是用ANSI C编写的，因此它具有高度的可移植性，可以运行在高端网络服务器和小型设备的各种设备上。</p>
+<p>Lua语言和解释器都是成熟，小巧，快速的。 它已经从其他编程语言和顶级软件标准发展而来。软件代码较小使它可以在内存较低的小型设备上运行。</p>
+<h1 id="lua的一些用途"><a class="header" href="#lua的一些用途">Lua的一些用途</a></h1>
+<p>游戏编程</p>
+<p>独立应用程序中的脚本</p>
+<p>在Web上编写脚本</p>
+<p>MySQL Proxy和MySQL WorkBench等数据库的扩展和附加组件</p>
+<p>安全系统，如入侵检测系统。</p>
+<h1 id="lua开发环境配置"><a class="header" href="#lua开发环境配置">Lua开发环境配置</a></h1>
+<pre><code class="language-shell">$ curl -R -O http://www.lua.org/ftp/lua-5.3.5.tar.gz
+$ yum install readline-devel
+$ tar zxf lua-5.3.5.tar.gz
+$ cd lua-5.3.5
+$ make linux test
+</code></pre>
+<h1 id="lua基础语法"><a class="header" href="#lua基础语法">Lua基础语法</a></h1>
+<h2 id="交互式模式编程"><a class="header" href="#交互式模式编程">交互式模式编程</a></h2>
+<pre><code>Lua提供了一种叫作交互模式的模式。 在此模式下，可以依次输入命令代码并获得即时结果。 这可以通过使用lua -i或lua命令在shell中调用。 输入此内容后，按Enter 键，将启动交互模式，如下所示
+</code></pre>
+<h2 id="默认模式编程"><a class="header" href="#默认模式编程">默认模式编程</a></h2>
+<p>使用Lua文件名参数调用解释器开始执行文件并继续直到脚本完成。 脚本完成后，解释器不再处于活动状态。</p>
+<pre><code class="language-lua">#!/usr/local/bin/lua
+print(&quot;Hello, Welcome&quot;)
+</code></pre>
+<h2 id="luatoken标记"><a class="header" href="#luatoken标记">LuaToken标记</a></h2>
+<p>Lua程序由各种标记组成，标记可以是<strong>关键字</strong>，<strong>标识符</strong>，<strong>常量</strong>，<strong>字符串文字</strong>或<strong>符号</strong>。 例如，以下Lua语句由三个标记组成 -</p>
+<h2 id="注释"><a class="header" href="#注释">注释</a></h2>
+<pre><code>--[[ my first program in Lua --]]
+</code></pre>
+<h2 id="标识符"><a class="header" href="#标识符">标识符</a></h2>
+<p>Lua标识符是用于标识变量，函数或任何其他用户定义项的名称。 标识符以字母<code>A</code>到<code>Z</code>或<code>a</code>到<code>z</code>或下划线<code>_</code>开头，后跟零个或多个字母，下划线和数字(<code>0</code>到<code>9</code>)。</p>
+<p>Lua不允许标识符中的标点符号，如<code>@</code>，<code>$</code>和<code>%</code>。 Lua是一种<strong>区分大小写</strong>的编程语言。</p>
+<h2 id="关键字"><a class="header" href="#关键字">关键字</a></h2>
+<p>以下列表显示了Lua中的一些保留字。 这些保留字不能用作常量或变量或任何其他标识符名称。</p>
+<pre><code>and break do else elseif end false for function if in local nil not or repeat return then true until while
+</code></pre>
+<h2 id="lua空白符"><a class="header" href="#lua空白符">Lua空白符</a></h2>
+<p>只包含空格(可能带有注释)的行称为空行，Lua解释器完全忽略它。</p>
+<p>空白符是Lua用来描述空格，制表符，换行符和注释的术语。 空格符将语句的一部分与另一部分分开，并使解释器能够识别语句中的一个元素(如<code>int</code>结束)和下一个元素的开始位置。 因此，在以下声明中</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../1.C++/cmake/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../2.LUA/基本语法.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../1.C++/cmake/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../2.LUA/基本语法.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
